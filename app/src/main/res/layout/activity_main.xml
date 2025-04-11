@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Connect Button and Status -->
+        <Button
+            android:id="@+id/connectBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connect to HC-05" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: Not Connected"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <!-- Remote Controls -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remote Controls"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <GridLayout
+            android:id="@+id/remotePanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="2"
+            android:layout_marginTop="10dp">
+
+            <Button android:id="@+id/upBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Up" />
+            <Button android:id="@+id/downBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Down" />
+            <Button android:id="@+id/leftBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Left" />
+            <Button android:id="@+id/rightBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Right" />
+            <Button android:id="@+id/clockwiseBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CW" />
+            <Button android:id="@+id/anticlockwiseBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ACW" />
+        </GridLayout>
+
+        <!-- Numeric Controls -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Numeric Controls"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:id="@+id/numericPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/inputUp" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:hint="Up value" android:inputType="number" />
+                <Button android:id="@+id/sendUp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Send" />
+            </LinearLayout>
+
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/inputDown" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:hint="Down value" android:inputType="number" />
+                <Button android:id="@+id/sendDown" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Send" />
+            </LinearLayout>
+
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/inputLeft" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:hint="Left value" android:inputType="number" />
+                <Button android:id="@+id/sendLeft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Send" />
+            </LinearLayout>
+
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/inputRight" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:hint="Right value" android:inputType="number" />
+                <Button android:id="@+id/sendRight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Send" />
+            </LinearLayout>
+
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/inputCW" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:hint="CW value" android:inputType="number" />
+                <Button android:id="@+id/sendCW" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Send" />
+            </LinearLayout>
+
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/inputACW" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:hint="ACW value" android:inputType="number" />
+                <Button android:id="@+id/sendACW" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Send" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
